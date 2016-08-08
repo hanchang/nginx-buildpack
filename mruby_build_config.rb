@@ -13,6 +13,10 @@ MRuby::Build.new do |conf|
 
   conf.gembox 'full-core'
 
+  conf.cc do |cc|
+    cc.flags << ENV['NGX_MRUBY_CFLAGS'] if ENV['NGX_MRUBY_CFLAGS']
+  end
+
   # Recommended for ngx_mruby
   #
   # These are gems that ngx_mruby recommends bundling with the build in order to
@@ -41,6 +45,6 @@ MRuby::Build.new do |conf|
   # opt-in when building to reduce overhead if unrequired. Left in our build as
   # they seem innocuous and may be useful in the future.
   #
-  conf.gem '../mrbgems/ngx_mruby_mrblib'
-  conf.gem '../mrbgems/rack-based-api'
+  conf.gem './mrbgems/ngx_mruby_mrblib'
+  conf.gem './mrbgems/rack-based-api'
 end

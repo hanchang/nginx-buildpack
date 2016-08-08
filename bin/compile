@@ -13,8 +13,8 @@ cache_dir=$2
 env_dir=$3
 
 # Versions
-NGINX_VERSION=1.10.0
-MRUBY_VERSION=v1.17.1
+NGINX_VERSION=1.11.3
+MRUBY_VERSION=v1.18.3
 
 # Download URLs
 nginx_tarball_url=http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
