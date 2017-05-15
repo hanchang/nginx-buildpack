@@ -44,6 +44,11 @@ After adding the buildpack, `nginx` will be available on your path. But here com
 
 Any application using this buildpack must handle all of this itself.
 
+Additionally, this buildpack includes mruby, which requires ruby to be available
+as part of the environment. When using this on Heroku, you must add the
+`heroku/ruby` buildpack to your application, and ensure the project you deploy
+has a Gemfile that installs `rake` in order to perform a successful build.
+
 
 ## Development
 
